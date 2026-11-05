@@ -1,0 +1,13 @@
+Verify the asymmetry</br>
+
+On vIOS-1:</br>
+
+traceroute 192.168.7.1 source 192.168.1.1</br>
+
+Expected hops: 10.0.12.2 (vIOS-2), 10.0.23.2 (vIOS-3), 10.0.34.2 (vIOS-4), 10.0.45.2 (vIOS-5).</br>
+
+On vIOS-5:</br>
+
+traceroute 192.168.1.1 source 192.168.7.1</br>
+
+Expected hops: 10.0.56.1 (vIOS-6), 10.0.36.1 (vIOS-3), 10.0.37.2 (vIOS-7), 10.0.17.1 (vIOS-1).</br>
