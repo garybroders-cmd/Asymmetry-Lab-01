@@ -25,4 +25,4 @@
 <br></br>
 <strong class="___1qwroh2 fl43uef f19n0e5" data-lexical-text="true">Test 5: make it symmetric. Set iVIOS-5 Gi0/0 cost to 1 and Gi0/1 to 100, and iVIOS-3 Gi0/0 cost to 1 and Gi0/1 to 100, then re-run both traceroutes.</strong></br>
 <br></br>
-<strong class="___1qwroh2 fl43uef f19n0e5" data-lexical-text="true">I can add a stateful firewall-style ACL on iVIOS-3, or convert the lab to BGP-based asymmetry using local preference and AS-path prepending.</strong></br>
+
