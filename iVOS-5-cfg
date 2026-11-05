@@ -1,0 +1,56 @@
+!
+! Last configuration change at 15:10:12 UTC Thu Nov 5 2026
+!
+version 15.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname iVOS-5
+!
+!
+!
+!
+interface Loopback0
+ no shutdown
+ ip address 10.255.0.5 255.255.255.255
+ ip ospf 1 area 0
+!
+interface Loopback100
+ no shutdown
+ description simultated LAN
+ ip address 192.168.7.1 255.255.255.0
+ ip ospf 1 area 0
+!
+interface GigabitEthernet0/0
+ no shutdown
+ description to iVIOS-4
+ ip address 10.0.45.2 255.255.255.252
+ ip ospf network point-to-point
+ ip ospf 1 area 0
+ ip ospf cost 100
+ duplex auto
+ speed auto
+ media-type rj45
+!
+interface GigabitEthernet0/1
+ no shutdown
+ description to iVOS-6
+ ip address 10.0.56.2 255.255.255.252
+ ip ospf network point-to-point
+ ip ospf 1 area 0
+ ip ospf cost 10
+ duplex auto
+ speed auto
+ media-type rj45
+!
+interface GigabitEthernet0/2
+ no shutdown
+ ip address 192.168.8.1 255.255.255.0
+ ip ospf 1 area 0
+ duplex auto
+ speed auto
+ media-type rj45
+!
+!
+end
